@@ -263,13 +263,12 @@ def winning_team
  away_team_scored = 0
   game_hash.each do|team_place, team_name|
     team_name.each do|team_attributes,team_data|
-    
       if team_attributes == :players
         team_data.each do |players|
           if team_place == :home
-               most_points_scored += players[:points]
-               if most_points_scored > highest_team_scored
-                 highest_team_scored = most_points_scored
+               home_team_scored += players[:points]
+             else if team_place == :away 
+               away_team_scored += players[:points]
                  binding.pry
                end
            end 
@@ -277,7 +276,11 @@ def winning_team
       end
     end  
   end
-most_points_scored
+      if home_team_scored > away_team_scored
+        game_hash[:home][:team_name]
+      else 
+         game_hash[:away][:team_name]
+       end
 end
 
 
