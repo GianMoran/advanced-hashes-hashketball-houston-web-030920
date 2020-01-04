@@ -264,10 +264,12 @@ def winning_team
     team_name.each do|team_attributes,team_data|
       if team_attributes == :players
         team_data.each do |players|
-          binding.pry
           if players[:points] 
                most_points_scored += players[:points]
-               binding.pry
+               if most_points_scored > highest_team_scored
+                 highest_team_scored = most_points_scored
+                 binding.pry
+               end
            end 
           end
       end
