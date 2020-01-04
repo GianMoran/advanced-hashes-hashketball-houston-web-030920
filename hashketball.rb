@@ -262,8 +262,6 @@ def winning_team
   highest_team_scored = 0
   game_hash.each do|team_place, team_name|
     team_name.each do|team_attributes,team_data|
-    if team_attributes == :team_name
-      binding.pry
       if team_attributes == :players
         team_data.each do |players|
           binding.pry
@@ -276,6 +274,7 @@ def winning_team
     end  
   end
 end
+most_points_scored
 end
 
 
