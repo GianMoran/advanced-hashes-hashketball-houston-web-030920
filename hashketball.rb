@@ -269,7 +269,7 @@ def winning_team
           if players[:points] 
                most_points_scored += players[:points]
             
-          end
+          #end
       end
     end  
   end
