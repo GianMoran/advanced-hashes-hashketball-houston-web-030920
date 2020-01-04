@@ -269,7 +269,6 @@ def winning_team
                home_team_scored += players[:points]
              else if team_place == :away 
                away_team_scored += players[:points]
-                 binding.pry
                end
            end 
           end
