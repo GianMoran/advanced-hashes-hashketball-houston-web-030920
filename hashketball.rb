@@ -265,6 +265,7 @@ def winning_team
        binding.pry
       if team_attributes == :players
         team_data.each do |players|
+          binding.pry
           if players[:points] > most_points_scored
                most_points_scored += players[:points]
             
