@@ -263,10 +263,10 @@ def winning_team
   game_hash.each do|team_place, team_name|
     team_name.each do|team_attributes,team_data|
        binding.pry
-      if team_attributes == :players
+      #if team_attributes == :players
         team_data.each do |players|
           binding.pry
-          if players[:points] > most_points_scored
+          if players[:points] 
                most_points_scored += players[:points]
             
           end
