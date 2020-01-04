@@ -266,7 +266,7 @@ def winning_team
     
       if team_attributes == :players
         team_data.each do |players|
-          if players[:points] 
+          if team_place == :home
                most_points_scored += players[:points]
                if most_points_scored > highest_team_scored
                  highest_team_scored = most_points_scored
