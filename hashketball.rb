@@ -259,8 +259,8 @@ player
 end
 def winning_team
   
-  most_points_scored= 0 
-  highest_team_scored = 0
+ home_team_scored = 0 
+ away_team_scored = 0
   game_hash.each do|team_place, team_name|
     team_name.each do|team_attributes,team_data|
       if team_attributes == :players
